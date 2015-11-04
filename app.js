@@ -1,4 +1,6 @@
 
+var api_key = ""
+
 function preload() {
 
 }
@@ -6,7 +8,7 @@ function preload() {
 function setup() {
   var weather;
   createCanvas(windowWidth, windowHeight);
-  var url = "http://api.wunderground.com/api/563b9b32faee9f40/conditions/q/NY/new_york.json";
+  var url = "http://api.wunderground.com/api/" + api_key + "/conditions/q/NY/new_york.json";
   debugger;
   $.getJSON(url, function( data ){
     weather = data.current_observation;
